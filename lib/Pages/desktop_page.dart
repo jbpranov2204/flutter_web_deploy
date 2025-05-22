@@ -47,7 +47,7 @@ class _DesktopPageState extends State<DesktopPage> {
       print('Sending prompt: $promptStyle with query: $userQuery');
 
       final response = await http.post(
-        Uri.parse('http://localhost:8000/prompt'),
+        Uri.parse('https://backend-flask-lkyu.onrender.com/prompt'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'user_id': 'user123',
